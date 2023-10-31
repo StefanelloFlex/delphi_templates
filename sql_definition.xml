@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates" version="1.0.0">
+    <template name="sql" invoke="auto">
+        <code language="Delphi" context="decl" delimiter="|"><![CDATA[
+const
+|*|SQL = '/*  */ ' +
+]]>
+        </code>
+    </template>
+</codetemplate>
