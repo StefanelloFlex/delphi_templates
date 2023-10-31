@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates" version="1.0.0">
+    <template name="cons" invoke="manual">
+
+        <description>Criação de consulta</description>
+        <author>Eduardo Stefanello</author>
+
+        <point name="consulta">
+            <text>consulta</text>
+        </point>
+
+        <point name="Conexao">
+            <script language="Delphi">InvokeCodeCompletion;</script>
+            <text>Conexao</text>
+        </point>
+
+        <point name="Transacao">
+            <script language="Delphi">InvokeCodeCompletion;</script>
+            <text>Transacao</text>
+        </point>
+
+        <point name="Append">
+            <text>Append</text>
+            <hint>ou Edit</hint>
+        </point>
+
+        <script language="Delphi" onenter="false" onleave="true">
+            DeclareVariable(|consulta|, TConsultaSQL);
+        </script>
+
+        <code language="Delphi" context="methodbody" delimiter="|"><![CDATA[
+|consulta| := TConsultaSQL.fGetConsulta(|Conexao|, |Transacao|, SQL);
+try
+|*||consulta|.ParamByName('').AsString := |end|;
+|*||consulta|.Open;
+finally
+|*||consulta|.Free;
+end;
+]]>
+        </code>
+    </template>
+</codetemplate>
