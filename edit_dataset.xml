@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates" version="1.0.0">
-    <template name="edit" invoke="manual">
+    <template name="edit" invoke="auto">
 
         <description>Edição de dataset</description>
         <author>Eduardo Stefanello</author>

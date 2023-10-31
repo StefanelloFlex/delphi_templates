@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates" version="1.0.0">
-    <template name="cons" invoke="manual">
+    <template name="cons" invoke="auto">
 
         <description>Criação de consulta</description>
         <author>Eduardo Stefanello</author>
