@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates" version="1.0.0">
+    <template name="loop" invoke="manual">
+
+        <description>Loop em dataset</description>
+        <author>Eduardo Stefanello</author>
+
+        <point name="DataSet">
+            <script language="Delphi">InvokeCodeCompletion;</script>
+            <text>dataset</text>
+        </point>
+
+        <point name="ManterPosicao">
+            <text>ManterPosicao_False</text>
+        </point>
+        <point name="DesabilitarControles">
+            <text>DesabilitarControles_True</text>
+        </point>
+        <point name="ComecarPeloPrimeiro">
+            <text>ComecarPeloPrimeiro_True</text>
+        </point>
+
+        <code language="Delphi" context="methodbody" delimiter="|"><![CDATA[
+|dataset|.Loop(procedure(Sender: TObject)
+begin
+|*||end|
+end, |ManterPosicao|, |DesabilitarControles|, |ComecarPeloPrimeiro|); 
+]]>
+        </code>
+    </template>
+</codetemplate>
