@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates" version="1.0.0">
+    <template name="pers" invoke="manual">
+
+        <description>Criação de persistência</description>
+        <author>Eduardo Stefanello</author>
+
+        <point name="objeto">
+            <text>objeto</text>
+        </point>
+        <point name="TABELA">
+            <text>TABELA</text>
+        </point>
+
+        <point name="Conexao">
+            <script language="Delphi">InvokeCodeCompletion;</script>
+            <text>Conexao</text>
+        </point>
+
+        <point name="Transacao">
+            <script language="Delphi">InvokeCodeCompletion;</script>
+            <text>Transacao</text>
+        </point>
+
+        <script language="Delphi" onenter="false" onleave="true">
+            DeclareVariable(|objeto|, T|TABELA|);
+        </script>
+
+        <code language="Delphi" context="methodbody" delimiter="|"><![CDATA[
+|objeto| := T|TABELA|.Create(|Conexao|, |Transacao|);
+try
+|*||end|
+finally
+|*||objeto|.Free;
+end;
+]]>
+        </code>
+    </template>
+</codetemplate>
