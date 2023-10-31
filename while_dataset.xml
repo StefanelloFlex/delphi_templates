@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates" version="1.0.0">
+    <template name="while" invoke="manual">
+
+        <description>While em dataset</description>
+        <author>Eduardo Stefanello</author>
+
+        <point name="dataset">
+            <script language="Delphi">InvokeCodeCompletion;</script>
+            <text>dataset</text>
+        </point>
+
+        <code language="Delphi" context="methodbody" delimiter="|"><![CDATA[
+|dataset|.First;
+while not |dataset|.Eof do
+begin
+|*||end|
+|*||dataset|.Next;
+end;
+]]>
+        </code>
+    </template>
+</codetemplate>
