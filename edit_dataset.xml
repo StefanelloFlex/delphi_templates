@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates" version="1.0.0">
+    <template name="edit" invoke="manual">
+
+        <description>Edição de dataset</description>
+        <author>Eduardo Stefanello</author>
+
+        <point name="DataSet">
+            <script language="Delphi">InvokeCodeCompletion;</script>
+            <text>dataset</text>
+        </point>
+
+        <point name="Append">
+            <text>Append</text>
+            <hint>ou Edit</hint>
+        </point>
+
+        <code language="Delphi" context="methodbody" delimiter="|"><![CDATA[
+|dataset|.|Append|;
+try
+|*||end|
+|*||dataset|.Post;
+finally
+|*||dataset|.Cancel;
+end;
+]]>
+        </code>
+    </template>
+</codetemplate>
